@@ -14,7 +14,7 @@ private-phone-apps := BasicDreams \
 		LatinIME \
 		LiveWallpapers \
 		MagicSmokeWallpapers \
-		Nfc \
+		Nfc1 \
 		PacProcessor \
 		PhaseBeam \
 		PhotoPhase \
