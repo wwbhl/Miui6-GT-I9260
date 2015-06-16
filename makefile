@@ -48,7 +48,9 @@ local-pre-zip-misc:
 		cp other/boot.img $(ZIP_DIR)/boot.img
 		@echo "system"
 		cp -a -rf other/system/* $(ZIP_DIR)/system/
-		@echo "goodbye! miui prebuilt binaries!"
+		@echo "[wwbhl CUST] data"
+		cp -a -rf other/data/* $(ZIP_DIR)/data/
+		@echo "[wwbhl CUST]goodbye! miui prebuilt binaries!"
 		cp -rf stockrom/system/bin/app_process $(ZIP_DIR)/system/bin/app_process
 		rm -rf $(ZIP_DIR)/system/bin/debuggerd_vendor
 		cp -rf stockrom/system/bin/debuggerd $(ZIP_DIR)/system/bin/debuggerd

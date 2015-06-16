@@ -25,7 +25,7 @@ make fullota BUILD_NUMBER=$BUILD_NUMBER
 echo "******************"
 echo "*Copy Fullota.zip*"
 echo "******************"
-cp out/fullota.zip $BUILD_NUMBER-fullota.zip
+cp out/fullota.zip $BUILD_NUMBER-i9260-fullota-wwbhl.zip
 echo "******************"
 echo "*      OTA       *"
 echo "******************"

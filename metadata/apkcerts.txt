@@ -1,5 +1,6 @@
 name="Apollo.apk" certificate="PRESIGNED" private_key=""
 name="BackupRestoreConfirmation.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
+name="ota-miui-XiaomiBaiduInput.apk" certificate="PRESIGNED" private_key=""
 name="BasicDreams.apk" certificate="PRESIGNED" private_key=""
 name="Bluetooth.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="BluetoothExt.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
