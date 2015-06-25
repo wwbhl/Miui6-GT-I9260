@@ -20,13 +20,10 @@ private-phone-apps := BasicDreams \
 		PhotoPhase \
 		PhotoTable \
 		PrintSpooler \
-		SamsungServiceMode \
 		Stk \
 		UserDictionaryProvider \
 		VisualizationWallpapers \
 		WAPPushManager \
-		DSPManager \
-		PinyinIME \
 
 private-phone-priv-apps := BackupRestoreConfirmation \
 		DefaultContainerService \

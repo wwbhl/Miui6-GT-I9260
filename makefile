@@ -19,7 +19,7 @@ local-modified-jars :=
 # All apks from MIUI
 local-miui-removed-apps := 
 
-local-miui-modified-apps := Settings MiuiFramework MiuiHome TeleService SecurityCenter MiuiSystemUI DeskClock
+local-miui-modified-apps := Settings miuisystem MiuiHome SecurityCenter MiuiSystemUI DeskClock
 
 local-phone-apps := 
 

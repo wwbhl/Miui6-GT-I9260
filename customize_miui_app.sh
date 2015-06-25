@@ -36,18 +36,12 @@ function applyPart () {
     done
 }
 
-if [ $1 = "MiuiFramework" ];then
+if [ $1 = "miuisystem" ];then
 	cp $1/superior.xml $2/assets/device_features/
-fi
-
-if [ $1 = "TeleService" ];then
-	applyPatch $1 $2
-	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
 if [ $1 = "Settings" ];then
 	applyPatch $1 $2
-
 fi
 
 if [ $1 = "SecurityCenter" ];then
