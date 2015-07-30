@@ -1889,24 +1889,6 @@
     .restart local v21    # "pkg":Landroid/content/pm/PackageInfo;
     move-object/from16 v0, v21
 
-    iget-object v0, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    move-object/from16 v23, v0
-
-    move-object/from16 v0, v23
-
-    iget v0, v0, Landroid/content/pm/ApplicationInfo;->flags:I
-
-    move/from16 v23, v0
-
-    const v24, 0x8000
-
-    and-int v23, v23, v24
-
-    #if-eqz v23, :cond_3
-
-    move-object/from16 v0, v21
-
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     move-object/from16 v23, v0
@@ -1920,7 +1902,6 @@
     if-eqz v23, :cond_4
 
     .line 2755
-    :cond_3
     move-object/from16 v0, v20
 
     invoke-interface {v0, v13}, Ljava/util/List;->remove(I)Ljava/lang/Object;

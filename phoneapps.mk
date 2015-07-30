@@ -4,7 +4,6 @@ local-phone-priv-apps = $(private-phone-priv-apps)
 private-phone-apps := BasicDreams \
 		Bluetooth \
 		BluetoothExt \
-		Camera2 \
 		CertInstaller \
 		DocumentsUI \
 		Galaxy4 \
@@ -21,9 +20,11 @@ private-phone-apps := BasicDreams \
 		PhotoTable \
 		PrintSpooler \
 		Stk \
+		SamsungServiceMode \
 		UserDictionaryProvider \
 		VisualizationWallpapers \
 		WAPPushManager \
+		Camera2 \
 
 private-phone-priv-apps := BackupRestoreConfirmation \
 		DefaultContainerService \
