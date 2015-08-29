@@ -19,7 +19,7 @@ local-modified-jars :=
 # All apks from MIUI
 local-miui-removed-apps := 
 
-local-miui-modified-apps := Settings Updater Backup MiuiHome miuisystem SecurityCenter MiuiSystemUI DeskClock DownloadProvider Music
+local-miui-modified-apps := Settings MiuiHome miuisystem SecurityCenter MiuiSystemUI
 
 local-phone-apps := 
 
@@ -51,6 +51,7 @@ local-pre-zip-misc:
 		@echo "[wwbhl CUST] data"
 		cp -a -rf other/data/* $(ZIP_DIR)/data/
 		@echo "[wwbhl CUST] goodbye! miui prebuilt binaries!"
+		echo "ro.miui.has_real_blur=0" >> $(ZIP_DIR)/system/build.prop
 		cp -rf stockrom/system/bin/app_process $(ZIP_DIR)/system/bin/app_process
 		rm -rf $(ZIP_DIR)/system/bin/debuggerd_vendor
 		cp -rf stockrom/system/bin/debuggerd $(ZIP_DIR)/system/bin/debuggerd

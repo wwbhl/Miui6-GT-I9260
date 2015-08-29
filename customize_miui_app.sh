@@ -54,26 +54,23 @@ if [ $1 = "MiuiSystemUI" ];then
 	applyPatch $1 $2
 fi
 
-if [ $1 = "DeskClock" ];then
-	applyPatch $1 $2
-fi
-if [ $1 = "Backup" ];then
-	applyPatch $1 $2
-fi
+#if [ $1 = "DeskClock" ];then
+#	applyPatch $1 $2
+#fi
 
-if [ $1 = "Updater" ];then
-        applyPatch $1 $2
-fi
+#if [ $1 = "Updater" ];then
+ #       applyPatch $1 $2
+#fi
 
 #if [ $1 = "TeleService" ];then
  #       applyPatch $1 $2
 #fi
 
-if [ $1 = "DownloadProvider" ];then
-    other/tools/idtoname.py other/tools/public-miui.xml $2/smali
-    other/tools/nametoid.py framework-res/res/values/public.xml $2/smali
-fi
+#if [ $1 = "DownloadProvider" ];then
+#    other/tools/idtoname.py other/tools/public-miui.xml $2/smali
+#    other/tools/nametoid.py framework-res/res/values/public.xml $2/smali
+#fi
 
-if [ $1 = "Music" ];then
-    applyPatch $1 $2
-fi
+#if [ $1 = "Music" ];then
+ #   applyPatch $1 $2
+#fi

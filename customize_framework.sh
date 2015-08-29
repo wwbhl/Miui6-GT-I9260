@@ -29,18 +29,19 @@ then
     cp -rf ../android/Editor/* $BUILD_OUT/framework/smali/android/widget/
 fi
 
-#if [ $2 = "$BUILD_OUT/framework2" ]
-#then
-#fi
+if [ $2 = "$BUILD_OUT/framework2" ]
+then
+    applyPatch "overlay/framework2"
+fi
 
 #if [ $2 = "$BUILD_OUT/telephony-common" ]
 #then
 #fi
 
-#if [ $2 = "$BUILD_OUT/services" ]
-#then
-#    applyPatch "overlay/services"
-#fi
+if [ $2 = "$BUILD_OUT/services" ]
+then
+    applyPatch "overlay/services"
+fi
 
 if [ $2 = "$BUILD_OUT/android.policy" ]
 then

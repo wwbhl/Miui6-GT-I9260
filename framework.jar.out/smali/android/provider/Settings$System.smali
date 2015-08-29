@@ -2257,6 +2257,8 @@
 
     .line 1476
     :cond_0
+    invoke-static {p0, p1, p2}, Landroid/provider/MiuiSettings;->getConfigurationForUser(Landroid/content/ContentResolver;Landroid/content/res/Configuration;I)V
+    
     return-void
 .end method
 

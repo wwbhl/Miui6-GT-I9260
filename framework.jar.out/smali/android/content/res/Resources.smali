@@ -7641,18 +7641,6 @@
     return-void
 .end method
 
-
-
-.method loadOverlayValue(Landroid/util/TypedValue;I)V
-    .locals 0
-    .param p1, "outValue"    # Landroid/util/TypedValue;
-    .param p2, "id"    # I
-
-    .prologue
-    return-void
-.end method
-
-
 .method createFromXml(Landroid/util/TypedValue;Landroid/content/res/XmlResourceParser;I)Landroid/graphics/drawable/Drawable;
     .locals 1
     .param p1, "value"    # Landroid/util/TypedValue;

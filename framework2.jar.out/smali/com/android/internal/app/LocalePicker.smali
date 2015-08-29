@@ -179,7 +179,7 @@
 
     .line 126
     .restart local v19    # "locales":[Ljava/lang/String;
-    const v2, 0x1070007
+    sget v2, Lcom/android/internal/R$array;->special_locale_codes:I
 
     move-object/from16 v0, v22
 
@@ -189,7 +189,7 @@
 
     .line 127
     .local v24, "specialLocaleCodes":[Ljava/lang/String;
-    const v2, 0x1070008
+    sget v2, Lcom/android/internal/R$array;->special_locale_names:I
 
     move-object/from16 v0, v22
 
@@ -435,7 +435,19 @@
     .restart local v12    # "finalSize":I
     new-instance v2, Lcom/android/internal/app/LocalePicker$LocaleInfo;
 
-    invoke-direct {v2, v11, v15}, Lcom/android/internal/app/LocalePicker$LocaleInfo;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+    move-object/from16 v0, v24
+
+    move-object/from16 v1, v25
+
+    invoke-static {v15, v0, v1, v11}, Lcom/android/internal/app/LocalePickerInjector;->getDisplayLanguage(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcom/android/internal/app/LocalePicker;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3, v15}, Lcom/android/internal/app/LocalePicker$LocaleInfo;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
     aput-object v2, v21, v13
 
@@ -565,9 +577,9 @@
 
     .prologue
     .line 98
-    const v0, 0x109005b
+    sget v0, Lcom/android/internal/R$layout;->locale_picker_item:I
 
-    const v1, 0x102017a
+    sget v1, Lcom/android/internal/R$id;->locale:I
 
     invoke-static {p0, v0, v1, p1}, Lcom/android/internal/app/LocalePicker;->constructAdapter(Landroid/content/Context;IIZ)Landroid/widget/ArrayAdapter;
 
