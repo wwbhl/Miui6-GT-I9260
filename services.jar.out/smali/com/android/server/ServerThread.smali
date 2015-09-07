@@ -2590,6 +2590,10 @@
     .restart local v153    # "serial":Lcom/android/server/SerialService;
     :cond_19
     :goto_32
+    move/from16 v0, v24
+
+    invoke-static {v5, v0}, Lcom/android/server/SystemServerInjector;->addExtraServices(Landroid/content/Context;Z)V
+
     :try_start_4a
     const-string v7, "SystemServer"
 

@@ -2711,9 +2711,16 @@
 
     .line 4030
     .local v6, "flags":I
-    if-eqz v18, :cond_9
+    #move-object/from16 v0, p0
+
+    #iget-boolean v0, v0, Lcom/android/server/BackupManagerService$PerformFullRestoreTask;->mNoninteractive:Z
+
+    #move/from16 v18, v0
+
+    #if-eqz v18, :cond_b
 
     .line 4033
+    :cond_4
     iget-object v0, v12, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     move-object/from16 v18, v0
