@@ -2447,25 +2447,25 @@
     return-void
 .end method
 
-.method static synthetic access$9600(Landroid/media/AudioService;)Landroid/view/VolumePanel;
+.method static synthetic access$9600(Landroid/media/AudioService;)Lmiui/view/VolumePanel;
     .locals 1
     .param p0, "x0"    # Landroid/media/AudioService;
 
     .prologue
     .line 118
-    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Landroid/view/VolumePanel;
+    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
     return-object v0
 .end method
 
-.method static synthetic access$9602(Landroid/media/AudioService;Landroid/view/VolumePanel;)Landroid/view/VolumePanel;
+.method static synthetic access$9602(Landroid/media/AudioService;Lmiui/view/VolumePanel;)Lmiui/view/VolumePanel;
     .locals 0
     .param p0, "x0"    # Landroid/media/AudioService;
     .param p1, "x1"    # Landroid/view/VolumePanel;
 
     .prologue
     .line 118
-    iput-object p1, p0, Landroid/media/AudioService;->mVolumePanel:Landroid/view/VolumePanel;
+    iput-object p1, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
     return-object p1
 .end method
@@ -3319,16 +3319,16 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Landroid/view/VolumePanel;
+    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
     if-eqz v0, :cond_0
 
     .line 4516
-    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Landroid/view/VolumePanel;
+    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/VolumePanel;->postDisplaySafeVolumeWarning(I)V
+    invoke-virtual {v0, v1}, Lmiui/view/VolumePanel;->postDisplaySafeVolumeWarning(I)V
 
     .line 4531
     :goto_0
@@ -5672,14 +5672,14 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Landroid/view/VolumePanel;
+    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
     if-eqz v0, :cond_0
 
     .line 4478
-    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Landroid/view/VolumePanel;
+    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
-    invoke-virtual {v0, p1}, Landroid/view/VolumePanel;->postMasterMuteChanged(I)V
+    invoke-virtual {v0, p1}, Lmiui/view/VolumePanel;->postMasterMuteChanged(I)V
 
     .line 4493
     :goto_0
@@ -5708,14 +5708,14 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Landroid/view/VolumePanel;
+    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
     if-eqz v0, :cond_0
 
     .line 4459
-    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Landroid/view/VolumePanel;
+    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
-    invoke-virtual {v0, p1}, Landroid/view/VolumePanel;->postMasterVolumeChanged(I)V
+    invoke-virtual {v0, p1}, Lmiui/view/VolumePanel;->postMasterVolumeChanged(I)V
 
     .line 4474
     :goto_0
@@ -7749,10 +7749,10 @@
 
     .prologue
     .line 1288
-    invoke-direct {p0, p2}, Lmiui/media/AudioService;->masterMuteChanged(I)V
+    invoke-direct {p0, p2}, Landroid/media/AudioService;->masterMuteChanged(I)V
 
     .line 1289
-    invoke-direct {p0, p1}, Lmiui/media/AudioService;->broadcastMasterMuteStatus(Z)V
+    invoke-direct {p0, p1}, Landroid/media/AudioService;->broadcastMasterMuteStatus(Z)V
 
     .line 1290
     return-void
@@ -7766,7 +7766,7 @@
 
     .prologue
     .line 1278
-    invoke-direct {p0, p1}, Lmiui/media/AudioService;->masterVolumeChanged(I)V
+    invoke-direct {p0, p1}, Landroid/media/AudioService;->masterVolumeChanged(I)V
 
     .line 1280
     new-instance v0, Landroid/content/Intent;
@@ -7895,7 +7895,9 @@
     const/4 p1, 0x5
 
     :cond_0
-    invoke-direct {p0, p1, p4}, Lmiui/media/AudioService;->showVolumeChangeUi(II)V
+    iget-object v1, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
+
+    invoke-virtual {v1, p1, p4}, Lmiui/view/VolumePanel;->postVolumeChanged(II)V
 
     and-int/lit8 v1, p4, 0x20
 
@@ -8524,14 +8526,14 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Landroid/view/VolumePanel;
+    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
     if-eqz v0, :cond_0
 
     .line 4497
-    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Landroid/view/VolumePanel;
+    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
-    invoke-virtual {v0, p1, p2}, Landroid/view/VolumePanel;->postVolumeChanged(II)V
+    invoke-virtual {v0, p1, p2}, Lmiui/view/VolumePanel;->postVolumeChanged(II)V
 
     .line 4512
     :goto_0

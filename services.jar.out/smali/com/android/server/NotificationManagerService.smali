@@ -4913,15 +4913,15 @@
 .end method
 
 .method private updateLightsLocked()V
-    .locals 10
+    .locals 11
 
     .prologue
-    .line 2505
+    .line 2465
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
 
     if-nez v8, :cond_2
 
-    .line 2507
+    .line 2467
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mLights:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
@@ -4932,7 +4932,7 @@
     :goto_0
     if-lez v1, :cond_2
 
-    .line 2508
+    .line 2468
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mLights:Ljava/util/ArrayList;
 
     add-int/lit8 v9, v1, -0x1
@@ -4943,7 +4943,7 @@
 
     check-cast v7, Lcom/android/server/NotificationManagerService$NotificationRecord;
 
-    .line 2509
+    .line 2469
     .local v7, "r":Lcom/android/server/NotificationManagerService$NotificationRecord;
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
 
@@ -4965,17 +4965,17 @@
 
     if-le v8, v9, :cond_1
 
-    .line 2511
+    .line 2471
     :cond_0
     iput-object v7, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
 
-    .line 2507
+    .line 2467
     :cond_1
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 2520
+    .line 2480
     .end local v1    # "i":I
     .end local v7    # "r":Lcom/android/server/NotificationManagerService$NotificationRecord;
     :cond_2
@@ -4983,25 +4983,25 @@
 
     if-nez v8, :cond_4
 
-    .line 2521
+    .line 2481
     const/4 v0, 0x0
 
-    .line 2532
+    .line 2492
     .local v0, "enableLed":Z
     :goto_1
     if-nez v0, :cond_9
 
-    .line 2533
+    .line 2493
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mNotificationLight:Lcom/android/server/LightsService$Light;
 
     invoke-virtual {v8}, Lcom/android/server/LightsService$Light;->turnOff()V
 
-    .line 2559
+    .line 2519
     :cond_3
     :goto_2
     return-void
 
-    .line 2522
+    .line 2482
     .end local v0    # "enableLed":Z
     :cond_4
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
@@ -5012,13 +5012,13 @@
 
     if-eqz v8, :cond_5
 
-    .line 2523
+    .line 2483
     const/4 v0, 0x1
 
     .restart local v0    # "enableLed":Z
     goto :goto_1
 
-    .line 2524
+    .line 2484
     .end local v0    # "enableLed":Z
     :cond_5
     iget-boolean v8, p0, Lcom/android/server/NotificationManagerService;->mInCall:Z
@@ -5047,14 +5047,14 @@
 
     if-nez v8, :cond_7
 
-    .line 2525
+    .line 2485
     :cond_6
     const/4 v0, 0x0
 
     .restart local v0    # "enableLed":Z
     goto :goto_1
 
-    .line 2526
+    .line 2486
     .end local v0    # "enableLed":Z
     :cond_7
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
@@ -5067,13 +5067,13 @@
 
     if-eqz v8, :cond_8
 
-    .line 2527
+    .line 2487
     const/4 v0, 0x0
 
     .restart local v0    # "enableLed":Z
     goto :goto_1
 
-    .line 2529
+    .line 2489
     .end local v0    # "enableLed":Z
     :cond_8
     const/4 v0, 0x1
@@ -5081,13 +5081,13 @@
     .restart local v0    # "enableLed":Z
     goto :goto_1
 
-    .line 2534
+    .line 2494
     :cond_9
     iget-boolean v8, p0, Lcom/android/server/NotificationManagerService;->mNotificationPulseEnabled:Z
 
     if-eqz v8, :cond_3
 
-    .line 2535
+    .line 2495
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
 
     iget-object v8, v8, Lcom/android/server/NotificationManagerService$NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
@@ -5096,7 +5096,7 @@
 
     move-result-object v6
 
-    .line 2536
+    .line 2496
     .local v6, "ledno":Landroid/app/Notification;
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
 
@@ -5104,18 +5104,18 @@
 
     move-result-object v5
 
-    .line 2541
+    .line 2501
     .local v5, "ledValues":Lcom/android/server/NotificationManagerService$NotificationLedValues;
     if-eqz v5, :cond_d
 
-    .line 2542
+    .line 2502
     iget v8, v5, Lcom/android/server/NotificationManagerService$NotificationLedValues;->color:I
 
     if-eqz v8, :cond_a
 
     iget v2, v5, Lcom/android/server/NotificationManagerService$NotificationLedValues;->color:I
 
-    .line 2543
+    .line 2503
     .local v2, "ledARGB":I
     :goto_3
     iget v8, v5, Lcom/android/server/NotificationManagerService$NotificationLedValues;->onMS:I
@@ -5124,7 +5124,7 @@
 
     iget v4, v5, Lcom/android/server/NotificationManagerService$NotificationLedValues;->onMS:I
 
-    .line 2544
+    .line 2504
     .local v4, "ledOnMS":I
     :goto_4
     iget v8, v5, Lcom/android/server/NotificationManagerService$NotificationLedValues;->offMS:I
@@ -5133,7 +5133,7 @@
 
     iget v3, v5, Lcom/android/server/NotificationManagerService$NotificationLedValues;->offMS:I
 
-    .line 2556
+    .line 2516
     .local v3, "ledOffMS":I
     :goto_5
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mNotificationLight:Lcom/android/server/LightsService$Light;
@@ -5144,7 +5144,7 @@
 
     goto :goto_2
 
-    .line 2542
+    .line 2502
     .end local v2    # "ledARGB":I
     .end local v3    # "ledOffMS":I
     .end local v4    # "ledOnMS":I
@@ -5153,21 +5153,21 @@
 
     goto :goto_3
 
-    .line 2543
+    .line 2503
     .restart local v2    # "ledARGB":I
     :cond_b
     iget v4, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationLedOn:I
 
     goto :goto_4
 
-    .line 2544
+    .line 2504
     .restart local v4    # "ledOnMS":I
     :cond_c
     iget v3, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationLedOff:I
 
     goto :goto_5
 
-    .line 2545
+    .line 2505
     .end local v2    # "ledARGB":I
     .end local v4    # "ledOnMS":I
     :cond_d
@@ -5177,14 +5177,11 @@
 
     if-eqz v8, :cond_e
 
-    .line 2546
     iget v2, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationColor:I
 
-    .line 2547
     .restart local v2    # "ledARGB":I
     iget v4, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationLedOn:I
 
-    .line 2548
     .restart local v4    # "ledOnMS":I
     iget v3, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationLedOff:I
 
@@ -5204,18 +5201,15 @@
 
     goto :goto_5
 
-    .line 2550
     .end local v2    # "ledARGB":I
     .end local v3    # "ledOffMS":I
     .end local v4    # "ledOnMS":I
     :cond_e
     iget v2, v6, Landroid/app/Notification;->ledARGB:I
 
-    .line 2551
     .restart local v2    # "ledARGB":I
     iget v4, v6, Landroid/app/Notification;->ledOnMS:I
 
-    .line 2552
     .restart local v4    # "ledOnMS":I
     iget v3, v6, Landroid/app/Notification;->ledOffMS:I
 

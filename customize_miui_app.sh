@@ -64,9 +64,10 @@ fi
  #       applyPatch $1 $2
 #fi
 
-#if [ $1 = "TeleService" ];then
- #       applyPatch $1 $2
-#fi
+if [ $1 = "TeleService" ];then
+        applyPatch $1 $2
+        $XMLMERGYTOOL $1/res/values $2/res/values
+fi
 
 #if [ $1 = "DownloadProvider" ];then
 #    other/tools/idtoname.py other/tools/public-miui.xml $2/smali

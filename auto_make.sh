@@ -25,7 +25,7 @@ make fullota BUILD_NUMBER=$BUILD_NUMBER
 echo "******************"
 echo "*Copy Fullota.zip*"
 echo "******************"
-cp out/fullota.zip $BUILD_NUMBER-i9268-fullota-wwbhl.zip
+cp out/fullota.zip $BUILD_NUMBER-i9260-fullota-wwbhl.zip
 echo "******************"
 echo "*      OTA       *"
 echo "******************"
@@ -33,7 +33,7 @@ echo "------------------"
 echo "    make ota?     "
 echo "------------------"
 read
-../tools/releasetools/ota_from_target_files -k ../build/security/testkey -i $LAST_TARGET-target.zip out/target_files.zip OTA-$LAST_TARGET-$BUILD_NUMBER.zip
+../tools/releasetools/ota_from_target_files -k ../build/security/testkey -i $LAST_TARGET-target.zip out/target_files.zip OTA-$LAST_TARGET-$BUILD_NUMBER-i9260-wwbhl.zip
 echo "******************"
 echo "*Copy  Target.zip*"
 echo "******************"

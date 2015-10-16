@@ -94,3 +94,4 @@ name="StockSettings.apk" certificate="build/target/product/security/platform.x50
 name="Settings_ex.apk" certificate="PRESIGNED" private_key=""
 name="CyanogenModCamera.apk" certificate="PRESIGNED" private_key=""
 name="MiuiCamera.apk" certificate="PRESIGNED" private_key=""
+name="AMAPNetworkLocation.apk" certificate="PRESIGNED" private_key=""

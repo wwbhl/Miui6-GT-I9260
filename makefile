@@ -19,7 +19,7 @@ local-modified-jars :=
 # All apks from MIUI
 local-miui-removed-apps := 
 
-local-miui-modified-apps := Settings MiuiHome miuisystem SecurityCenter MiuiSystemUI
+local-miui-modified-apps := TeleService Settings MiuiHome miuisystem SecurityCenter MiuiSystemUI
 
 local-phone-apps := 
 

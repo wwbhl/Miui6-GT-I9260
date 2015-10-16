@@ -144,6 +144,41 @@
     return-void
 .end method
 
+.method public static declared-synchronized of(II)Lcom/android/internal/widget/LockPatternView$Cell;
+    .locals 2
+    .param p0, "row"    # I
+    .param p1, "column"    # I
+
+    .prologue
+    const-class v1, Lcom/android/internal/widget/LockPatternView$Cell;
+
+    monitor-enter v1
+
+    const/4 v0, 0x3
+
+    :try_start_0
+    invoke-static {p0, p1, v0}, Lcom/android/internal/widget/LockPatternView$Cell;->checkRange(IIB)V
+
+    sget-object v0, Lcom/android/internal/widget/LockPatternView$Cell;->sCells:[[Lcom/android/internal/widget/LockPatternView$Cell;
+
+    aget-object v0, v0, p0
+
+    aget-object v0, v0, p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v1
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+
+    throw v0
+.end method
+
 .method public static declared-synchronized of(IIB)Lcom/android/internal/widget/LockPatternView$Cell;
     .locals 2
     .param p0, "row"    # I
